@@ -3,8 +3,8 @@ const git = require('simple-git/promise')().silent(true)
 
 const NOOP = () => {}
 const getGitUrl = () => git.listRemote(['--get-url'])
-  .then(url => url.trim())
-  .catch(NOOP)
+.then(url => url.trim())
+.catch(NOOP)
 
 module.exports = () => [
   {
@@ -22,7 +22,7 @@ module.exports = () => [
   },
   {
     type: 'input',
-    name: 'package_name',
+    name: 'name',
     message: 'name',
 
     // By default, uses the
@@ -36,7 +36,7 @@ module.exports = () => [
   },
   {
     type: 'input',
-    name: 'package_description',
+    name: 'description',
     message: 'description',
     default: 'This is an awesome project!'
   }
