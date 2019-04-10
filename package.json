@@ -1,7 +1,7 @@
 {
   "name": "common-generator-prompts",
   "version": "1.0.0",
-  "description": "common-generator-prompts",
+  "description": "Common yeoman generator prompts, actually inquirer prompts, to handle package informations",
   "main": "src/index.js",
   "scripts": {
     "test": "nyc ava --timeout=10s",
@@ -17,7 +17,10 @@
     "url": "git://github.com/kaelzhang/common-generator-prompts.git"
   },
   "keywords": [
-    "common-generator-prompts"
+    "common-generator-prompts",
+    "generator",
+    "yeoman",
+    "utilites"
   ],
   "engines": {
     "node": ">= 6"
@@ -37,5 +40,9 @@
     "eslint-config-ostai": "^1.1.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint": "^5.14.0"
+  },
+  "dependencies": {
+    "githuburl": "^0.1.6",
+    "simple-git": "^1.110.0"
   }
 }

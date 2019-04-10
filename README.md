@@ -15,7 +15,7 @@
 
 # common-generator-prompts
 
-<!-- description -->
+Common yeoman generator prompts, actually [inquirer](https://www.npmjs.com/package/inquirer) prompts, to handle package informations
 
 ## Install
 
@@ -26,8 +26,19 @@ $ npm i common-generator-prompts
 ## Usage
 
 ```js
-import common_generator_prompts from 'common-generator-prompts'
+prompting () {
+  const promps = require('common-generator-prompts')().concat([
+    // your other prompts
+  ])
+
+  this.prompt(prompts).then(props => {
+    // To access props later use this.props.someAnswer;
+    this.props = props
+  })
+}
 ```
+
+`common-generator-prompts` handles
 
 ## License
 
